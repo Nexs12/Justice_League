@@ -17,6 +17,7 @@
     href="https://fonts.googleapis.com/css2?family=Lemon&family=Marcellus&family=Mulish:wght@400;600;700;800&family=Poppins:wght@500&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <title>Document</title>
 </head>
 
@@ -36,13 +37,20 @@
       </nav>
       <ul class="flex icon-list">
         <li class="item">
-          <p class="navigation-icon">icon</p>
+          <svg width="20" height="20" class="navigation-icon-link">
+            <use href="./image/symbol-defs.svg#scope"></use>
+          </svg>
+
         </li>
         <li class="item">
-          <p class="navigation-icon">icon</p>
+          <svg width="20" height="20" class="navigation-icon-link">
+            <use href="./image/symbol-defs.svg#bell"></use>
+          </svg>
         </li>
         <li class="item">
-          <p class="navigation-icon">icon</p>
+          <svg width="20" height="20" class="navigation-icon-link">
+            <use href="./image/symbol-defs.svg#person"></use>
+          </svg>
         </li>
       </ul>
     </div>
@@ -50,7 +58,7 @@
 
   <main>
     <section>
-      <h1>Zack Snyder's Justice League</h1>
+      <h1 class="animate__animated animate__shakeX">Zack Snyder's Justice League</h1>
       <ul>
         <li>
           <p>2021</p>
@@ -104,6 +112,19 @@
       </ul>
     </section>
   </main>
+
+  <div class="consult-container">
+    <h2 class="form-name">Замовте консультацію</h2>
+    <form class="consult-form">
+      <label><input type="text" name="user-name" class="form-data" placeholder="Віталій"></label>
+      <label><input type="tel" name="eser-tel" class="form-data" placeholder="Номер телефону"></label>
+      <button class="form-btm" type="submit"></button>
+    </form>
+    <p class="form-text">Залиште заявку або телефонуйте за номером (099) 111 22 33, і наш менеджер звяжеться з вами для
+      кваліфікованої
+      консультації.</p>
+  </div>
+
 </body>
 
 </html>
