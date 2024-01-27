@@ -60,6 +60,9 @@ image {
   padding: 8px 10px;
   font-family: Lemon;
   font-size: 40px;
+
+  animation: rotate-scale-up 5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite
+    both;
 }
 .navigation {
 }
@@ -94,6 +97,8 @@ image {
   height: 2px;
   border-radius: 50px;
   background-image: linear-gradient(317deg, #26fff2 13.2%, #326cff 71.54%);
+  animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1)
+    infinite both;
 }
 
 .navigation-link:hover {
@@ -109,4 +114,79 @@ image {
   height: 2px;
   border-radius: 50px;
   background-image: linear-gradient(317deg, #26fff2 13.2%, #326cff 71.54%);
+}
+
+.icon-list {
+  align-items: center;
+  gap: 90px;
+}
+
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+
+@keyframes rotate-scale-up {
+  0% {
+    transform: scale(1) rotateZ(0);
+  }
+  50% {
+    transform: scale(2) rotateZ(180deg);
+  }
+  100% {
+    transform: scale(1) rotateZ(360deg);
+  }
+}
+
+.consult-container {
+  border-left: #44c697 15px solid;
+  border-radius: 3px 0px 0px 3px;
+  width: 513px;
+  height: 457px;
+  background-color: #fff;
+  padding: 50px 30px;
+}
+.consult-form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+.form-name {
+  color: var(--color4, #1e2e36);
+  text-align: left;
+  font-family: "Proxima Nova";
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 15px;
+}
+.form-data {
+  display: block;
+  width: 432px;
+  height: 51px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid gray;
+  outline: transparent;
+}
+.form-btm {
+  width: 432px;
+  height: 51px;
+}
+.form-text {
+  color: var(--color4, #1e2e36);
+  font-family: "Proxima Nova";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.25;
 }
